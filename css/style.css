@@ -879,6 +879,7 @@ a.btn:hover svg.play {
     background-position: right bottom;
     position: relative;
     padding: 35px 0;
+    overflow:hidden;
 }
 #gamecases .gamecase {
     width: 100%;
@@ -898,6 +899,7 @@ a.btn:hover svg.play {
     #gamecases {
         background-size: 768px;
         padding: 75px 0;
+        overflow:visible;
     }
     #gamecases .gamecase {
         position: absolute;
