@@ -61,22 +61,22 @@ section.nopadding {
 
 .container:after, .container:before {
     content: " ";
-    display: table
+    display: table;
 }
 
 .container:after {
-    clear: both
+    clear: both;
 }
 
 @media (min-width:768px) {
     .container {
-        width: 690px
+        width: 690px;
     }
 }
 
 @media (min-width:992px) {
     .container {
-        width: 970px
+        width: 970px;
     }
 }
 
@@ -263,7 +263,7 @@ a.btn {
     transition:color .25s cubic-bezier(.25,.45,.46,.92);
 }
 @media (max-width: 768px) {
-    a.btn { width: 100%; }
+    a.btn { width: 100%; padding: 0 25px; }
 }
 a.btn:after,
 a.btn:before{
@@ -320,10 +320,11 @@ a.btn svg path {
 
 
 /*** Header ***/
-header {
+#header {
     height: 100vh;
     /* For at least Firefox */
     min-height: 100vh;
+    background-color: #EFF2F5;
     background: url('../img/bg_header.png') no-repeat center;
     background-size: cover;
     position: relative;
@@ -331,7 +332,7 @@ header {
     text-align: center;
 }
 
-header .container {
+#header .container {
     position:absolute;
     left:50%;
     top:44%;
@@ -339,7 +340,11 @@ header .container {
     width: 100%;
     padding: 35px;  
 }
-header .container img {
+#header .container--center h1 {
+    font-size: 30px;
+    line-height: 36px;
+}
+#header .container img {
     width: 130px;
     height: 130px;
     margin-bottom: 35px;
@@ -349,7 +354,7 @@ header .container img {
     .header {
         text-align: left;
     }
-    header .container {
+    #header .container {
         left:10%;
         top: unset;
         bottom:155px;
@@ -358,7 +363,21 @@ header .container img {
         padding: 0; 
         text-align: left;
     }
-    header .container img {
+    #header .container--center {
+        position:absolute;
+        left:50%;
+        top:48%;
+        bottom: unset;
+        transform:translate(-50%,-50%);  
+        width: 100%;
+        padding: 35px; 
+        text-align: center;
+    }
+    #header .container--center h1 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    #header .container img {
         width: 150px;
         height: 150px;
         margin-bottom: 10px;
@@ -483,37 +502,6 @@ header .container img {
     }
 }
 
-@media (min-width:992px) {
-    .work-card {
-        max-width: 350px;
-        height: 200px;
-    }
-
-    .work-card--slide {
-        margin-right: 220px
-    }
-
-    .work-card__name {
-        font-size: 70px
-    }
-
-    .work-card__visual--vlnt {
-        max-width: 680px
-    }
-}
-
-@media (min-width:1200px) {
-    .work-card {
-        max-width: 855px;
-        height: 520px
-    }
-
-    .work-card--slide {
-        margin-right: 220px
-    }
-}
-
-
 
 /**** Blokken ****/
 
@@ -553,7 +541,8 @@ header .container img {
 .block__content {
     position: relative;
     z-index: 2;
-    padding: 50px 0
+    padding: 50px 0;
+    width: 100%;
 }
 
 .block__content h2 {
