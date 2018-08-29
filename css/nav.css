@@ -1,0 +1,346 @@
+
+
+/* ------------------------------------------
+  RESPONSIVE NAV STYLES
+--------------------------------------------- */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 768px) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
+/* ------------------------------------------
+  FIXED HEADER
+--------------------------------------------- */
+
+header.nav {
+  background: #fff;
+  position: fixed;
+  z-index: 301;
+  width: 100%;
+  left: 0;
+  top: 0;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.15);
+}
+
+header.nav .logo {
+  padding: 3px 35px;
+  color: #000;
+  float: left;
+}
+header.nav .logo svg {
+  width: 60px;
+  height: 60px;
+    z-index: 2;
+    position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  header.nav {
+    top: 20px;
+    left:0;
+    right:0;
+    height: 70px;
+    transition: 0.2s;
+    padding-left: 20px;
+  }
+  header.nav.affix {
+    top:0;
+    left:0; 
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.15);
+  }
+  header.nav .logo svg circle, header.nav .logo svg path {
+    fill:#fff;
+    transition: 0.2s;
+  }
+  header.nav .logo:hover svg circle, header.nav .logo:hover svg path {
+    fill:#ff0;
+  }
+  header.nav.affix .logo svg circle, header.nav.affix .logo svg path {
+    fill:#2D3033;
+  }
+}
+
+/* ------------------------------------------
+  MASK
+--------------------------------------------- */
+
+.mask {
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  transition: opacity 300ms;
+  background: rgba(256,256,256, .9);
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.android .mask {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.js-nav-active .mask {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .mask {
+    display: none !important;
+    opacity: 0 !important;
+  }
+}
+
+
+/* ------------------------------------------
+  NAVIGATION STYLES
+--------------------------------------------- */
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.nav-collapse,
+.nav-collapse * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.nav-collapse,
+.nav-collapse ul {
+  list-style: none;
+  width: 100%;
+  float: left;
+}
+
+@media screen and (min-width:  768px) {
+  .nav-collapse {
+    float: right;
+    width: auto;
+  }
+}
+
+.nav-collapse li {
+  float: left;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  header.nav {
+    background: none;
+    box-shadow: none;
+    width:100%;
+  }
+  header.nav:before {
+    content: "";
+    position: absolute;
+    transition: 0.2s;
+    top:0;
+    left:0;
+    right:0;
+    height: 0;
+    background: #fff;
+  }
+  header.nav.affix:before {
+    height: 100%;
+  }
+
+  .nav-collapse {
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+  .nav-collapse li {
+    width: auto;
+  }
+}
+
+.nav-collapse a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-decoration: none;
+  background: #fff;
+  padding: 20px 35px;
+  color: #2D3033;
+  width: 100%;
+  float: left;
+  text-transform: uppercase;
+  /* HOME OVER ONS EVENTS: */
+letter-spacing: 3px;
+}
+
+.nav-collapse a:active,
+.nav-collapse .active a {
+  background: #ffff00;
+}
+.nav-collapse a:hover {
+  background: #2D3033;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-collapse a {
+    background: none;
+    border-left: none;
+    padding: 1.02em 2em;
+    text-align: center;
+    border-top: 0;
+    float: left;
+    margin: 0;
+    font-size: 13px;
+    color: #fff;
+    transition: 0.3s;
+  }
+  .nav-collapse a:active,
+  .nav-collapse .active a {
+    background: none;
+    color: #ffff00;
+  }
+  .nav.affix .nav-collapse a {
+    background: none;
+    opacity: 0.7;
+  }
+  .nav.affix .nav-collapse a {
+    color: #2D3033;
+  }
+  .nav .nav-collapse a:hover {
+    color: #2D3033;
+    background-color: #ff0;
+    opacity: 1;
+  }
+  .nav.affix .nav-collapse a:active,
+  .nav.affix .nav-collapse .active a {
+    opacity: 1;
+  }
+  .nav-collapse a:active:hover,
+  .nav-collapse .active a:hover {
+    cursor: default;
+    background: inherit;
+    color: #ff0;
+  }
+  .nav.affix .nav-collapse a:active:hover,
+  .nav.affix .nav-collapse .active a:hover {
+    color: #2D3033;
+  }
+}
+
+.nav-collapse ul ul a {
+  background: #ca3716;
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-collapse ul ul a {
+    display: none;
+  }
+}
+
+
+/* ------------------------------------------
+  NAV TOGGLE STYLES
+--------------------------------------------- */
+
+@font-face {
+  font-family: "responsivenav";
+  src:url("../icons/responsivenav.eot");
+  src:url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("../icons/responsivenav.ttf") format("truetype"),
+    url("../icons/responsivenav.woff") format("woff"),
+    url("../icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nav-toggle {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  text-indent: -300px;
+  position: relative;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  float: right;
+}
+
+.nav-toggle:before {
+  color: #000; /* Edit this to change the icon color */
+  font: normal 28px/75px "responsivenav"; /* Edit font-size (28px) to change the icon size */
+  text-transform: none;
+  text-align: center;
+  position: absolute;
+  content: "\2261"; /* Hamburger icon */
+  text-indent: 0;
+  speak: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ff0;
+}
+
+.nav-toggle.active:before {
+  font-size: 24px;
+  content: "\78"; /* Close icon */
+}
+
+
+
+
+

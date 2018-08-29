@@ -202,7 +202,7 @@ a.go-next{
     position:absolute;
     left:50%;
     bottom:0px;
-    z-index:50;
+    z-index:1;
     color:#000;
     transition:color .25s cubic-bezier(.25,.45,.46,.92);
     transform:translateX(-50%);
@@ -815,6 +815,7 @@ a.btn:hover svg.play {
     fill: #ff0;
 }
 /*** Why ***/
+#why {margin-top: 20px;}
 #why .block-img {
     background-position: left;
 }
