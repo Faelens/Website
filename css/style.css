@@ -134,6 +134,9 @@ h2 {
 .text-center {
     text-align: center;
 }
+.text-right {
+    text-align: right;
+}
 .title-line {
     display: block;
     width: 46px;
@@ -793,7 +796,13 @@ footer .socials a:hover svg path {
 
 
 /*** FIFA PAGINA ****/
-
+a.btn svg.play {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+a.btn:hover svg.play {
+    fill: #ff0;
+}
 /*** Why ***/
 #why .block-img {
     background-position: left;
@@ -921,6 +930,60 @@ footer .socials a:hover svg path {
 }
 @media (min-width: 992px) {
     .proposition-blocks {
+        justify-content: space-around;
+    }
+}
+
+/**** events ***/
+#your-event {
+    background: url('../img/bg_stadium.jpg') no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 20px;
+}
+#your-event h2 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+#your-event h3 {
+    font-size: 25px;
+    line-height: 30px
+}
+#your-events .events {
+    margin: -5px;
+}
+.events__event {
+    background-color: #fff;
+    padding: 20px 20px 0;
+    margin: 20px 5px;
+}
+.events__event .properties {
+    margin-top: 15px;
+}
+.events__event .properties p {
+    display: flex;
+    justify-content: space-between;
+}
+.events__event .properties p span {
+    width: calc(100% - 50px);
+    padding-left: 10px;
+}
+.events__event .properties img {
+    height: 18px;
+    margin: auto;
+}
+.events__event a.more {
+    display: block;
+    margin: 15px 0;
+}
+@media (min-width: 768px) { 
+    .events__event {
+        max-width: 300px;
+    }
+    #your-event .events {
+        display: flex;
         justify-content: space-around;
     }
 }
