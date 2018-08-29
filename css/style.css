@@ -97,13 +97,17 @@ section.nopadding {
     font-weight: normal;
     font-style: normal;
 }
-h1,h2,h3{
+h1,h2,h3,h5{
     font-family: 'Bold Font', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+h2 {
     font-size: 36px;
     line-height: 40px;
 }
@@ -120,6 +124,10 @@ h2 {
     h2 {
         font-size: 50px;
         line-height: 60px;
+    }
+    h3 {
+        font-size: 40px;
+        line-height: 45px;
     }
 }
 
@@ -779,5 +787,140 @@ footer .socials a:hover svg path {
     }
     footer .socials {
         justify-content: flex-start;
+    }
+}
+
+
+
+/*** FIFA PAGINA ****/
+
+/*** Why ***/
+#why .block-img {
+    background-position: left;
+}
+
+/*** status ***/
+#status {
+    background-color: #000;
+    background: url('../img/bg_status.jpg') no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 75px;
+}
+
+/*** status ***/
+#gamecases {
+    margin-top: 20px;
+    background-color: #ff0;
+    background: #ff0 url('../img/bg_gamecase.png') no-repeat;
+    background-size: 170%;
+    background-position: right bottom;
+    position: relative;
+    padding: 35px 0;
+}
+#gamecases .gamecase {
+    width: 100%;
+    margin: 15px 35px 0;
+    height: 350px;
+    right: 40px;
+    bottom: -35px;
+    background: url('../img/gamecase.png') no-repeat bottom;
+    background-size: contain;
+}
+@media (min-width: 500px) {
+    #gamecases .gamecase {
+        height: 400px;
+    }
+}
+@media (min-width: 768px) {
+    #gamecases {
+        background-size: 768px;
+        padding: 75px 0;
+    }
+    #gamecases .gamecase {
+        position: absolute;
+        width: 400px;
+        height: 350px;
+        right: -5px;
+        bottom: 15px;
+    }
+
+}
+@media (min-width: 992px) {
+    #gamecases {
+        background-size: 1000px;
+        padding: 75px 0;
+    }
+    #gamecases .gamecase {
+        position: absolute;
+        width: 600px;
+        height: 470px;
+        right: 15px;
+        bottom: -35px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #gamecases {
+        margin-top: 20px;
+        background-color: #ff0;
+        background: #ff0 url('../img/bg_gamecase.png') no-repeat;
+        background-size: 1400px;
+        background-position: right bottom;
+        position: relative;
+        padding: 75px 0;
+    }
+    #gamecases .gamecase {
+        position: absolute;
+        width: 677px;
+        height: 490px;
+        right: 40px;
+        bottom: -35px;
+        background: url('../img/gamecase.png') no-repeat;
+        background-size: contain;
+    }
+}
+
+/*** proposition ***/
+#proposition {
+    background-color: #2D3033;
+    color: #fff;
+    padding: 35px 0;
+    margin-top: 20px;
+}
+.proposition-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.proposition-blocks__block {
+    padding: 20px 0;
+}
+.proposition-blocks__block img {
+    height: 35px;
+}
+.proposition-blocks__block ul {
+    margin: 20px 0 0 20px;
+}
+.proposition-blocks.container:after, .proposition-blocks.container:before {
+    content: " ";
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .proposition-blocks {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .proposition-blocks__block {
+        margin: 10px;
+        width: 45%;
+        max-width: 300px;
+    }
+}
+@media (min-width: 992px) {
+    .proposition-blocks {
+        justify-content: space-around;
     }
 }
