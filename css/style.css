@@ -807,6 +807,41 @@ footer .socials a:hover svg path {
 
 
 /*** FIFA PAGINA ****/
+
+    #header.fifa {overflow: hidden;background: #2D3033;}
+video {
+    display: none;
+}
+video#background {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+    opacity: 0.6;
+}
+@media (min-width: 768px) {
+
+    video {
+        display: block;
+    }
+    video#background {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        object-fit: cover;
+        opacity: 0.6;
+    }
+}
 a.btn svg.play {
   transform: rotate(90deg);
   transform-origin: 50% 50%;
