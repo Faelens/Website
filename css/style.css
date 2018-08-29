@@ -21,6 +21,8 @@ body {
     font-size: 16px;
     line-height: 1.7;
     -webkit-overflow-scrolling: touch;
+    width: 100%;
+    overflow-x: hidden;
 }
 section {
     padding: 35px;
