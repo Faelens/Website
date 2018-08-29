@@ -518,13 +518,13 @@ header .container img {
 /**** Blokken ****/
 
 
-.media-block {
+.block {
     display: flex;
     position: relative;
     align-items: center
 }
 
-.media-block:before {
+.block:before {
     content: "";
     display: block;
     position: absolute;
@@ -546,35 +546,35 @@ header .container img {
     background-size: cover;
 }
 
-.media-block__visual-holder {
+.block__visual-holder {
     display: none
 }
 
-.media-block__content {
+.block__content {
     position: relative;
     z-index: 2;
     padding: 50px 0
 }
 
-.media-block__content h2 {
+.block__content h2 {
     margin-top: 0
 }
 
 @media (min-width:768px) {
-    .media-block {
+    .block {
         min-height: 100vh
     }
 
-    .media-block:before {
+    .block:before {
         left: 22%
     }
 
-    .media-block--right:before {
+    .block--right:before {
         right: 22%;
         left: inherit
     }
 
-    .media-block__visual-holder {
+    .block__visual-holder {
         display: block;
         position: relative;
         min-width: 44%;
@@ -584,13 +584,13 @@ header .container img {
         overflow: hidden
     }
 
-    .media-block--right .media-block__visual-holder {
+    .block--right .block__visual-holder {
         order: 2;
         margin-right: 0;
         margin-left: 50px
     }
 
-    .media-block__visual {
+    .block__visual {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -605,11 +605,11 @@ header .container img {
 }
 
 @media (min-width:992px) {
-    .media-block__visual-holder {
+    .block__visual-holder {
         margin-right: 100px
     }
 
-    .media-block--right .media-block__visual-holder {
+    .block--right .block__visual-holder {
         order: 2;
         margin-right: 0;
         margin-left: 100px;
@@ -617,11 +617,11 @@ header .container img {
 }
 
 @media (min-width:1200px) {
-    .media-block__visual-holder {
+    .block__visual-holder {
         margin-right: 180px
     }
 
-    .media-block--right .media-block__visual-holder {
+    .block--right .block__visual-holder {
         margin-left: 180px
     }
 }
