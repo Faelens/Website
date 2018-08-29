@@ -808,7 +808,13 @@ footer .socials a:hover svg path {
 
 /*** FIFA PAGINA ****/
 
-    #header.fifa {overflow: hidden;background: #2D3033;}
+#header.fifa {overflow: hidden;background: #2D3033;}
+@media (max-width: 768px) {
+    #header.fifa .container {top: 49%;}
+    #header.fifa img.logo {height: 80px;margin-bottom: 15px;}
+    #header.fifa h1 {font-size: 25px;}
+    #header.fifa .btn {font-size: 14px;}
+}
 video {
     display: none;
 }
@@ -825,7 +831,6 @@ video#background {
     opacity: 0.6;
 }
 @media (min-width: 768px) {
-
     video {
         display: block;
     }

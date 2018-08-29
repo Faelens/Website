@@ -279,6 +279,12 @@ letter-spacing: 3px;
     color: #2D3033;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .nav-collapse a {
+    letter-spacing: 0px;
+    padding: 1.02em 1.8em;
+  }
+}
 
 .nav-collapse ul ul a {
   background: #ca3716;
