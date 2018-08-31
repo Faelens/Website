@@ -92,7 +92,9 @@ header.nav .logo svg {
     transition: 0.2s;
     padding-left: 20px;
   }
-  header.nav.affix {
+  header.nav.dark {top: 0;}
+  body.no-padding header.nav.dark {top: 20px;}
+  header.nav.affix, body.no-padding header.nav.affix {
     top:0;
     left:0; 
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.15);
@@ -104,7 +106,8 @@ header.nav .logo svg {
   header.nav .logo:hover svg circle, header.nav .logo:hover svg path {
     fill:#ff0;
   }
-  header.nav.affix .logo svg circle, header.nav.affix .logo svg path {
+  header.nav.affix .logo svg circle, header.nav.affix .logo svg path,
+  header.nav.dark .logo svg circle, header.nav.dark .logo svg path {
     fill:#2D3033;
   }
 }
@@ -252,11 +255,11 @@ letter-spacing: 3px;
     background: none;
     color: #ffff00;
   }
-  .nav.affix .nav-collapse a {
+  .nav.affix .nav-collapse a, .nav.dark .nav-collapse a {
     background: none;
     opacity: 0.7;
   }
-  .nav.affix .nav-collapse a {
+  .nav.affix .nav-collapse a, .nav.dark .nav-collapse a {
     color: #2D3033;
   }
   .nav .nav-collapse a:hover {
@@ -265,7 +268,9 @@ letter-spacing: 3px;
     opacity: 1;
   }
   .nav.affix .nav-collapse a:active,
-  .nav.affix .nav-collapse .active a {
+  .nav.affix .nav-collapse .active a,
+  .nav.dark .nav-collapse a:active,
+  .nav.dark .nav-collapse .active a {
     opacity: 1;
   }
   .nav-collapse a:active:hover,
@@ -275,7 +280,9 @@ letter-spacing: 3px;
     color: #ff0;
   }
   .nav.affix .nav-collapse a:active:hover,
-  .nav.affix .nav-collapse .active a:hover {
+  .nav.affix .nav-collapse .active a:hover,
+  .nav.dark .nav-collapse a:active:hover,
+  .nav.dark .nav-collapse .active a:hover {
     color: #2D3033;
   }
 }
@@ -345,8 +352,5 @@ letter-spacing: 3px;
   font-size: 24px;
   content: "\78"; /* Close icon */
 }
-
-
-
 
 

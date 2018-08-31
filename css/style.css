@@ -14,6 +14,7 @@ body {
     -webkit-font-smoothing: antialiased;
     margin: 0;
     padding: 0;
+    padding-top: 75px;
     width: 100%;
     background-color: #fff;
     color: #2D3033;
@@ -21,6 +22,12 @@ body {
     font-size: 16px;
     line-height: 1.7;
     -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 768px) {
+    body {padding-top: 90px}
+}
+body.no-padding {
+    padding-top: 0px;
 }
 section {
     padding: 35px;
@@ -85,6 +92,8 @@ section.nopadding {
         width: 1140px
     }
 }
+.anchor-placement {position: absolute; top: -50px; left: 0;}
+.relative {position: relative;}
 
 @font-face {
     font-family: 'Bold Font';
@@ -335,6 +344,7 @@ a.btn svg path {
 
 .color-yellow {color:#ff0;}
 .color-white {color: #fff;}
+.color-grey {color: #EFF2F5;}
 
 
 .bg-white {background-color: #fff;}
@@ -595,7 +605,19 @@ a.btn svg path {
         overflow: hidden
     }
 
-    .block--right .block__visual-holder {
+    .block__contact-info {
+        display: block;
+        position: relative;
+        min-width: 44%;
+        max-width: 470px;
+        height: 65vh;
+        margin-right: 50px;
+        padding: 35px;
+        background-color: #2D3033;
+        color: #fff;
+    }
+
+    .block--right .block__visual-holder, .block--right .block__contact-info {
         order: 2;
         margin-right: 0;
         margin-left: 50px
@@ -1103,3 +1125,40 @@ button:hover, button:focus, button:active {
 .yellow span {}
 .yellow span::before {border-left-color: #898916; border-top-color: #898916;}
 .yellow span::after {border-right-color: #898916; border-top-color: #898916;}
+
+
+/*** Article ***/
+#intro-paragraph {
+    background-color: #f1f4f6;
+}
+.article-padding {
+    padding-top: 105px;
+    padding-bottom: 35px;
+}
+article p, article img {
+    margin-bottom: 20px;
+    width: 100%;
+}
+img.seperator {
+    margin-top: 35px;
+}
+.break {height: 70px;}
+@media (min-width: 768px) {
+    .article-padding {
+        padding-top: 20vh;
+        padding-bottom: 70px
+    }
+    .article-col {
+        margin: 0 16.667%;
+        width: 66.667%;
+    }
+    img.seperator {
+        margin-top: -35px;
+    }
+}
+@media (min-width: 992px) {
+    .article-col {
+        margin: 0 25%;
+        width: 50%;
+    }
+}
