@@ -1162,3 +1162,33 @@ img.seperator {
         width: 50%;
     }
 }
+
+/**** About us ***/
+#about {
+    background: #2D3033;
+    color: #fff;
+}
+.members {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.members__member {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+.members__member img {
+    margin-bottom: 5px;
+}
+@media (min-width: 768px) {
+    .members__member {
+        width: calc(30% - 20px);
+    }
+}
+@media (min-width: 992px) {
+    .members__member {
+        width: calc(25% - 20px);
+        max-width: 300px;
+    }
+}
