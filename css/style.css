@@ -756,8 +756,12 @@ a.btn svg path {
 
 /*** Partners ***/
 #partners {
-    background-color: #f1f4f6;
+    background-color: ;
     margin-top: 20px;
+    background: url('../img/bg_partners.jpg') no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -1178,8 +1182,8 @@ img.seperator {
     width: calc(50% - 10px);
     margin-bottom: 20px;
 }
-.members__member img {
-    margin-bottom: 5px;
+.members__member h5 {
+    margin-top: 10px;
 }
 @media (min-width: 768px) {
     .members__member {
@@ -1189,6 +1193,55 @@ img.seperator {
 @media (min-width: 992px) {
     .members__member {
         width: calc(25% - 20px);
-        max-width: 300px;
     }
+}
+
+.members__member {
+    perspective: 1000px;
+    max-width: 200px;
+}
+    /* flip the pane when hovered */
+    .members__member:hover .flipper, .members__member.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+.members__member .back {
+    padding-bottom: 100%;
+    background: #000;
+    height: 0;
+    position: relative;
+}
+.members__member .back img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
 }
